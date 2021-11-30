@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --ff: "Outfit, sans-serif";
+  --fs: 18px;
+
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --attribution: hsl(228, 45%, 44%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--very-dark-blue-main);
+  display: grid;
+  place-items: center;
+  color: hsl(0, 0%, 100%);
+}
+
+.hero-img {
+  width: 302px;
+  height: 302px;
+  border-radius: 8px;
+  border: 1px solid var(--white);
+  margin: 24px;
+}
+
+h1 {
+  font-family: var(--ff);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 27.72px;
+  color: var(--white);
+}
+
+.container {
+  width: 350px;
+  height: 596px;
+  border-radius: 15px;
+  background-color: var(--very-dark-blue-card);
+  font-size: var(--fs);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--attribution);
+}
