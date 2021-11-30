@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 
 :root {
-  --ff: "Outfit, sans-serif";
+  --ff: "Outfit", sans-serif;
   --fs: 18px;
 
   --soft-blue: hsl(215, 51%, 70%);
@@ -15,25 +15,59 @@
 
 body {
   background-color: var(--very-dark-blue-main);
+  font-family: var(--ff);
   display: grid;
   place-items: center;
   color: hsl(0, 0%, 100%);
 }
 
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+a:hover {
+  color: var(--cyan);
+}
+
 .hero-img {
+  margin: 24px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hero-img img {
+  border-radius: 8px;
+  width: 302px;
+  height: 302px;
+}
+
+.hero-img::after {
+  content: url("./images/icon-view.svg");
+  background-color: var(--cyan);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 302px;
   height: 302px;
   border-radius: 8px;
-  border: 1px solid var(--white);
-  margin: 24px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-img:hover::after {
+  opacity: 0.5;
 }
 
 h1 {
-  font-family: var(--ff);
   font-size: 22px;
   font-weight: 600;
   line-height: 27.72px;
   color: var(--white);
+  margin: 0px 24px 16px;
 }
 
 .container {
@@ -44,11 +78,73 @@ h1 {
   font-size: var(--fs);
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+main > p {
+  margin: 0px 24px 24px;
+  color: var(--soft-blue);
+  line-height: 26px;
 }
 
-.attribution a {
-  color: var(--attribution);
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  aligh-items: center;
+  margin: 24px;
+}
+
+.product-price,
+.product-countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-price > img {
+  padding-right: 6.48px;
+}
+
+.product-countdown > img {
+  padding-right: 7.7px;
+}
+
+.product-price > span {
+  color: var(--cyan);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.product-countdown > span {
+  color: var(--soft-blue);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+hr {
+  width: 302px;
+  height: 1px;
+  background-color: var(--very-dark-blue-line);
+  text-align: center;
+  margin: 0px 24px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  margin: 16px 96px 32px 24px;
+}
+
+footer > img {
+  width: 33px;
+  height: 33px;
+  margin-right: 16px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+footer > p {
+  color: var(--soft-blue);
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 20px;
 }
